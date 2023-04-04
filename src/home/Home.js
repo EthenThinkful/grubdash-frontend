@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { listDishes } from "../utils/api";
 import DishCard from "./DishCard";
 import ErrorAlert from "../layout/ErrorAlert";
+import "./home.css";
 
 function Home({ addToCart }) {
   const [dishes, setDishes] = useState([]);
@@ -27,7 +28,8 @@ function Home({ addToCart }) {
   return (
     <main>
       <ErrorAlert error={error} />
-      <div className="row">{cards}</div>
+      {console.log(cards)}
+        {cards.length === 0 ? <div class="loader"></div> : <div className="row">{cards}</div>}
     </main>
   );
 }
