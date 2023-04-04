@@ -28,8 +28,7 @@ function Home({ addToCart }) {
   return (
     <main>
       <ErrorAlert error={error} />
-      {console.log(cards)}
-        {cards.length === 0 ? <div class="loader"></div> : <div className="row">{cards}</div>}
+        {cards.length === 0 ? <div><div className="flexer"><h2>Retrieving data from database...</h2></div><div className="loader"></div></div> : <div className="row">{cards}</div>}
     </main>
   );
 }

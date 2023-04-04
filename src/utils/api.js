@@ -2,6 +2,11 @@
  * Defines the base URL for the API.
  * The default values is overridden by the `API_BASE_URL` environment variable.
  */
+
+//Dev:
+// const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:8080/";
+
+// Production:
 const API_BASE_URL = process.env.API_BASE_URL || "https://grubdash-backend-m3tj.onrender.com";
 
 /**
